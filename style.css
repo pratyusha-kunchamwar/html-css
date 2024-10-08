@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --background-main: rgba(247, 247, 255, 255); /*lightblue*/
+  --background-card: rgba(255, 255, 255, 255); /*white*/
+  --background-card-button: rgba(121, 125, 225, 255); /*blue*/
+  --text-color: rgba(79, 80, 101, 255); /*dark black */
+}
+body {
+  font-size: 15px;
+  font-family: "Montserrat";
+  height: 100vh;
+}
+
+/* whole header */
+.toggle-Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+}
+.toggle {
+  position: relative;
+  margin: 0 0.4rem;
+  width: 3.3rem;
+  height: 1.6rem;
+  border-radius: 1.6rem;
+  background-color: var(--background-card-button);
+}
+.toggle::after {
+  content: "";
+  position: absolute;
+  top: 0.1rem;
+  left: 0.1rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background-color: #ffff;
+  transition: all 0.4s linear;
+}
+input[type="checkbox"]:checked + .toggle::after {
+  translate: 2rem 0;
+}
+#check {
+  display: none;
+}
+
+/* container */
+.container {
+  display: flex;
+  width: 100vw;
+  margin: 1rem 0;
+  background-image: url("./images/bg-top.svg"), url("./images/bg-bottom.svg");
+  background-position: top right, bottom left;
+  background-repeat: no-repeat;
+  background-color: va(--background-color);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: scroll;
+  color: var(--text-color);
+}
+.header {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--background-card);
+}
+
+.card {
+  background-color: var(--background-card);
+  border-radius: 0.8rem;
+  margin: 0.3rem 0;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
+}
+
+ul {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul li {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+.price {
+  font-size: 3rem;
+  padding-bottom: 1.5rem;
+}
+.button {
+  margin-top: 1rem;
+  width: 13rem;
+  height: 3rem;
+  color: var(--background-card);
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: var(--background-card-button);
+}
+.bottom-line {
+  border-bottom: 1px solid var(--text-color);
+}
+.professional {
+  background-color: var(--background-card-button);
+  color: var(--background-card);
+}
+.professional button {
+  background-color: var(--background-card);
+  color: var(--background-card-button);
+}
+
+
+/* desktop */
+@media (min-width: 544px) {
+  .professional {
+    padding: 0.8rem 0rem;
+  }
+  .container {
+    width: 80%;
+    background-image: url("./images/bg-top.svg"), url("./images/bg-bottom.svg");
+    background-position: top right, bottom left;
+    background-repeat: no-repeat;
+    max-width: 1140px;
+    margin: 2rem auto auto;
+    padding: 0 0 1rem;
+    overflow: scroll;
+    box-shadow: 0 0 0.5rem  var(--text-color);
+  }
+  .cards {
+    flex-direction: row;
+  }
+
+  .header {
+    margin: 0;
+  }
+  ul {
+    padding: 0;
+    margin: 0.9rem;
+  }
+}
