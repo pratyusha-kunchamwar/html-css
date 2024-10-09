@@ -13,7 +13,7 @@
 body {
   font-size: 15px;
   font-family: "Montserrat";
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 /* whole header */
@@ -148,6 +148,7 @@ ul li {
   }
   .cards {
     flex-direction: row;
+    /* flex-wrap: wrap; */
   }
 
   .header {
