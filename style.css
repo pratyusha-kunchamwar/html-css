@@ -77,6 +77,7 @@ input[type="checkbox"]:checked + .toggle::after {
   align-items: center;
   flex-direction: column;
   background-color: var(--background-card);
+  
 }
 
 .card {
@@ -148,7 +149,7 @@ ul li {
   }
   .cards {
     flex-direction: row;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
   }
 
   .header {
