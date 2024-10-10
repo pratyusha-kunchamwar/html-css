@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  font-size: 1.5rem;
+}
+.items {
+  height: 80%;
+  width: 100%;
+}
+.page-edge {
+  background-color: rgb(240, 233, 233);
+  height: 10%;
+  width: 100%;
+}
+
+.div1 {
+  background-color: rgb(140, 198, 63);
+}
+.div2 {
+  background-color: rgba(11, 148, 68);
+}
+.div3 {
+  background-color: rgb(245, 238, 49);
+}
+
+/* small */
+@media (min-width: 320px) {
+  .items {
+    padding: 1% 0;
+  }
+  .div1 {
+    height: 50%;
+    width: 100%;
+  }
+  .div2,
+  .div3 {
+    height: 25%;
+    width: 100%;
+  }
+}
+
+/* medium */
+@media (min-width: 768px) {
+  .items {
+    position: relative;
+  }
+  .div1 {
+    position: absolute;
+    height: 74%;
+    width: 100%;
+    top: 1%;
+  }
+  .div2,
+  .div3 {
+    position: absolute;
+    bottom: 0;
+    height: 24%;
+    width: 50%;
+    bottom: 1%;
+  }
+  .div2 {
+    left: 0;
+  }
+  .div3 {
+    left: 50%;
+  }
+}
+
+/* large*/
+@media (min-width: 1020px) {
+  .items {
+    position: relative;
+  }
+  .div1 {
+    top: 1%;
+    bottom: 1%;
+    left: 25%;
+    height: 98%;
+    width: 50%;
+  }
+  .div2,
+  .div3 {
+    top: 1%;
+    bottom: 1%;
+    height: 98%;
+    width: 25%;
+  }
+  .div2 {
+    left: 0;
+  }
+  .div3 {
+    right: 0;
+    left: 75%;
+  }
+}
